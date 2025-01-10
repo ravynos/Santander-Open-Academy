@@ -2,9 +2,9 @@
 
 Começando pelo básico, para não quebrar a tradição, teremos o bom e velho "Olá, mundo!"
 
-'''python
+```python
 print(Olá, mundo!)
-'''
+```
 
 >[!IMPORTANT]
 >Todos os assuntos abordados, e todos os códigos, terão seus arquivos .py disponíveis no repositório.
@@ -12,15 +12,18 @@ print(Olá, mundo!)
 
 ## Comentários
 
-Comentário de 1 linha e usado no inicio da linha "#".
-'''python
-\# Essa linha e ignorada pelo interpretador.
-'''
+Comentário de 1 linha e usado no inicio da linha "#".  
+```python
+# Essa linha e ignorada pelo interpretador.
+```
+
+
 
 Comentário em bloco, ou varias linhas deve ser envolvido em "Aspas triplas"
 
-'''python
+```python
 """ Esse bloco
 vai ser totalmente ignorado pelo interpretador
 ao ser executado """
-'''
+```
+
