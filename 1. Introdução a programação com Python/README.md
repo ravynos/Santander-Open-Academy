@@ -1,5 +1,7 @@
 # Introdução a programação com Python.
 
+## 1. Introdução ao Python
+
 Começando pelo básico, para não quebrar a tradição, teremos o bom e velho "Olá, mundo!"
 
 ```python
@@ -50,3 +52,13 @@ calculo = 20
 
 Ao chamar a variável "calculo" o sistema vai apresentar o resultado 20, onde vai ser somado primeiro a + b depois vai ser multiplicado por c.
 
+
+## 2. Noções básicas de Python
+
+### Tipos de dados básicos
+
+- Inteiros(int)
+	Números inteiros, conforme na matemática, são números que não possuem 
+- Ponto Flutuantes (float)
+- Texto (string)
+- Bolleanos
