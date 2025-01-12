@@ -130,12 +130,101 @@ total_vendas
 
 E agora alguns exemplos de variáveis invalidas:
 ```python
-1idade #Começa com número (Note o interpretador dando uma cor distinta ao número no inicio, algo que ele não faz no bloco acima.)
-nome-completo #Usa um hifen em vez de um sublinhado (Dá mesma forma, o hífen recebe com diferente)
+1idade #Começa com número.
+nome-completo #Usa um hifen em vez de um sublinhado.
 while #Usa uma palavra reservada do Python (None que o texto o já o exibe com cor diferente, mostrando que ele não e reconhecido como uma variável.)
 ```
 
 >[!Important]
 >Lembre-se sempre!!!
 >Por questão de boas praticas de programação, e também para garantir um código de fácil manutenção, sempre escolha nomes descritivos para suas variáveis, para que você mesmo ao revisar seu código compreenda qual a função dela.
+
+### 2.2. Operadores
+
+Operadores são símbolos que serão usados em operações com variáveis e valores, são vários operadores usados em Python, entre eles serão realizados operações aritméticas, comparações e lógicas.
+
+>Aritméticos
+
+Operadores aritméticos são usados para operações matemáticas básicas. Esses operadores são:
+
+- Soma (+)
+- Subtração (-)
+- Multiplicação (\*)
+- Divisão (/)
+- Divisão inteira (//): Divide os valores e retorna o resultado do tipo inteiro, descartando a parte decimal.
+- Módulo (%): Devolve o resto de uma divisão.
+- Exponenciação (\*\*)
+
+Exemplos:
+```python
+a = 10
+b = 3
+
+soma = a + b # 13
+subtração = a - b # 7
+multplicacao = a * b # 30
+divisao = a / b # 3.33333333
+divisao_inteira = a // b # 3
+modulo = a % b # 1
+exponenciacao = a ** b # 1000
+```
+
+> Comparação
+
+Operadores de comparação são usado para comparação de valores, retornando então um resultado com valor booleano. Esses operadores são:
+
+- Igual (\=\=)
+- Diferente (!=)
+- Maior que (>)
+- Menor que (<)
+- Maior ou igual que (>=)
+- Menor ou igual que (<=)
+
+Exemplos:
+
+```python
+a = 8
+b = 2
+
+igual = a == b # False
+diferente = a != b # True
+maior_que = a > b # True
+menor_que = a < b # False
+maior_igual = a >= b # True
+menor_igual = a < = b # True
+```
+
+> Lógicos
+
+Operadores lógicos são utilizados para combinar expressões condicionais e avaliar múltiplas condições. Esses operadores são:
+
+- AND (e): Retorna verdadeiro se "a" e "b" forem verdadeiros, caso contrario retorna falso.
+- OR (ou):  Retorna verdadeiro se "a" ou "b" forem verdadeiros, caso contrario retorna falso.
+- NOT(não): Inverte o resultado, se a condicional retornar falso ele retorna verdadeiro, se ela for verdadeira ele retorna como falso.
+
+Exemplos:
+```python
+a = 5
+b = 10
+
+and_ = (a > 5) and (b <5) # True
+or_ = (a > 15) ort (b < 5) #True
+not_ = not (a > 5) # True
+```
+
+>[!important]
+>Como na matemática no Python temos a ordem de precedência dos operadores, alguns operadores tem prioridades sobre os outros. Essa ordem é: 
+>1. Parênteses
+>2. Exponenciação
+>3. Multiplicação/divisão
+>4. soma/subtração
+>5. Operadores de comparação
+>6. Operadores lógicos
+>
+> Seguindo essa ordem, o interpretador vai primeiro respeitar essa ordem ao processar o resultado.
+> ``` Python
+> soma = (5+1) * 2 # Na conta seguir, sem o parênteses primeiro seria multiplicado 2 vezes 1 e depois somado a 5 dando resultado 7, respeitando a ordem de precedência, primeiro vai ser somado 5 + 1 com resultado 6, depois vai ser multiplicado a soma por 2, com resultado 12.
+> ```
+
+
 
