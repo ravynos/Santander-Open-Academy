@@ -227,4 +227,52 @@ not_ = not (a > 5) # True
 > ```
 
 
+## Estrutura de controle
+
+3.1. Loops
+
+> For
+
+O loop "for" é utilizado para iterar sobre uma sequência (como uma lista, tupla ou string) ou qualquer objeto iterável. A sintaxe básica é a seguinte:
+```python
+for variável in sequencia:
+	# Bloco de código a repetir
+	# Instruções
+```
+
+Exemplo:
+
+```python
+classe = ["Mariana", "Pedro", "Julia", "Roberto"]
+
+for classe in alunos:
+	print(classe)
+```
+
+Nesse exemplo, o loop "for" itera sobre a lista alunos. Em cada iteração, a variável classe assume o valor de um elemento da lista, e o bloco de código dentro do loop e executado. Nesse caso, cada aluno da classe e impresso em uma linha separada.
+
+> While
+
+"While" e usado para repetir um bloco de código enquanto uma condição for verdadeira. A sintaxe básica e a seguinte:
+```python
+while condição:
+	#bloco de código a repetir
+	#instruções
+```
+
+Exemplo:
+
+```python
+contador = 0
+
+while contador < 5:
+	print(contador)
+	contador += 1
+```
+
+No exemplo acima, definimos a variável de controle contador, que se inicia com 0, a partir dela iniciamos o loop "while", e adicionamos uma condição de parada, que no caso e quando a variável contador atingir o numero 5, no bloco de código a executar, definimos para que seja impresso o conteúdo da variável contador, após a impressão, inserimos a instrução de acrescentar 1 numero ao contador, assim, ele vai imprimir de 0 a 4, e quando o contador atingir 5, o loop e encerrado.
+
+>[!warning]
+>E muito importante ter cuidado ao usar o loop while, caso a condição nunca se tornar falsa, como no exemplo acima caso não fosse adicionado a instrução de somar + 1 a cada repetição, o loop será executado indefinidamente, que e muito conhecido como loop infinito.
+
 
