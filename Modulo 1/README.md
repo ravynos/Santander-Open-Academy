@@ -229,6 +229,83 @@ not_ = not (a > 5) # True
 
 ## Estrutura de controle
 
+>Estruturas condicionais
+
+As estrutura de controle permite controlar o fluxo da execução do programa, as estruturas mais comuns em python são as condicionais e de repetição.
+
+- IF
+A estrutura "if" é utilizada para executar um bloco de código se a condição for verdadeira.
+
+```
+if condicao:
+	# Bloco de código
+	#Instruções
+```
+
+Exemplo:
+
+```python
+idade = 18
+
+if idade >= 18:
+	print("Entrada Permitida!!!")
+```
+
+No caso acima a condição "if" vai avaliar se a idade e maior ou igual a 18, caso sim, ele imprime a mensagem "Entrada permitida!!!"
+
+- ELSE
+A estrutura "else" permite executar um bloco de código alternativo, caso  a execução do "if" seja falsa.
+
+```python
+idade = 15
+
+if idade >= 18:
+	print("Entrada Permitida!!!")
+else:
+	print("Entrada Proibida!!!")
+```
+
+No caso acima, como a condição if não e atendida, o programa executa a condição alternativa, imprimindo assim a mensagem "Entrada Proibida!!!"
+
+- ELIF
+Na estrutura condicional "elif", e possível especificar múltiplas condições, caso será usado o primeiro "if" e caso ele não seja atendido, a estrutura vai seguir para a próxima condição, caso essa condição seja um if, ele vai ler condição por condição até o final do bloco, no caso ao usar o elfi, caso uma condição seja atendida, a execução e encerrada, e o programa vai ser direcionado a executar o bloco de código da condição atendida.
+
+```
+if condicao1:
+	 #Bloco de código
+	 Instruções
+elif condcai 2:
+	#Bloco de código
+	Instruções
+else:
+	#Bloco de código
+	Instruções
+```
+
+Exemplo:
+```python
+nota = 85  
+  
+  
+if nota >= 90:  
+   print ("Excelente")  
+  
+elif nota >= 80:  
+   print ("Muito bom")  
+  
+elif nota >= 70:  
+   print ("Bom")  
+  
+else:  
+   print ("Precisa melhorar")
+```
+ Nesse exemplo, a segunda condição e atendida, com isso a execução e encerrada e o print e executado, caso fosse utilizado if, todas as condições seriam avaliadas depois a condição verdadeira seria executada, tornando a execução lenta.
+
+>[!important]
+>A mesma estrutura que foi feita usando elif, pode ser feita também usando if, porém, ao usar if, cada condição vai ser avaliada até o final, mesmo que a primeira seja verdadeira, consumindo mais recurso de processamento, deixando o programa mais lento.
+
+
+ 
 3.1. Loops
 
 > For
@@ -276,3 +353,51 @@ No exemplo acima, definimos a variável de controle contador, que se inicia com 
 >E muito importante ter cuidado ao usar o loop while, caso a condição nunca se tornar falsa, como no exemplo acima caso não fosse adicionado a instrução de somar + 1 a cada repetição, o loop será executado indefinidamente, que e muito conhecido como loop infinito.
 
 
+> Controle de Loops
+
+Algumas instruções podem ser usadas para realizar o controlar o fluxo dos loops, algumas delas são?
+
+- Break
+A instrução "break" e utilizado para interromper o loop, independente da condição. Quando o break e encontrado o loop e interrompido e a execução continua com a próxima instrução fora do loop.
+
+```python
+contador = 0
+
+while True:
+	print(contador)
+	contador += 1
+
+	if contador == 5:
+		break
+```
+
+No exemplo acima, o "while" e executado indefinidamente devido a condição "True". Porém utilizando a estrutura condicional "if" para verificar se o contador é igual a 5,  assim que a condição for satisfeita, ser executado a instrução break que vai para a execução.
+
+- Continue
+
+A instrução continue é usada para pular o restante do código dentro do loop e passar para a próxima iteração.
+
+Exemplo:
+
+```python
+for i in range(10):
+	if i % 2 == 0:
+		continue
+	print(i)
+```
+
+No exemplo acima, será realizada a contagem de 0 a 9 utilizando a função "range". Nas instruções foi adicionado a condição "if", que ira verificar se 1 e divisível por 2 (ou seja, se for par), com isso o a instrução "continue" e executada pulando a execução e iniciando o loop novamente, como resultado, somente os números impares serão impressos.
+
+- Pass
+
+A instrução "pass" é uma operação nula que não faz nada. É utilizada como um marcador de posição quando uma instrução é sintaticamente necessária, mas nenhuma ação é desejada.
+
+```python
+for i in range(5):  
+    pass
+```
+
+Neste exemplo, o loop for itera sobre os números de 0 a 4, mas nenhuma ação é realizada dentro do loop devido à instrução pass. Isso pode ser útil quando se está desenvolvendo um programa e se deseja reservar um bloco de código para implementá-lo mais tarde.
+
+>[!note]
+>As estruturas de controle são ferramentas poderosas que nos permitem controlar o fluxo de execução de nossos programas. Com as estruturas condicionais (if, if-else, if-elif-else) podemos tomar decisões baseadas em condições, enquanto que com os loops (for, while) podemos repetir blocos de código várias vezes. Além disso, as instruções break, continue e pass nos fornecem um controle adicional sobre o comportamento dos loops.
