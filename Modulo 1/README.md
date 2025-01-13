@@ -229,7 +229,7 @@ not_ = not (a > 5) # True
 
 ## Estrutura de controle
 
->Estruturas condicionais
+### Estruturas condicionais
 
 As estrutura de controle permite controlar o fluxo da execução do programa, as estruturas mais comuns em python são as condicionais e de repetição.
 
@@ -401,3 +401,23 @@ Neste exemplo, o loop for itera sobre os números de 0 a 4, mas nenhuma ação �
 
 >[!note]
 >As estruturas de controle são ferramentas poderosas que nos permitem controlar o fluxo de execução de nossos programas. Com as estruturas condicionais (if, if-else, if-elif-else) podemos tomar decisões baseadas em condições, enquanto que com os loops (for, while) podemos repetir blocos de código várias vezes. Além disso, as instruções break, continue e pass nos fornecem um controle adicional sobre o comportamento dos loops.
+
+
+## 4. Estrutura de dados
+
+As estruturas de dados, nos permite armazenar dados de maneira organizada e eficiente, permitindo acessar os dados de maneira ordenada.
+Essas estruturas em Python são listas, tuplas, dicionários e conjuntos, cada uma com suas características e uso.
+
+### Listas
+
+Lista e uma estrutura de dados mutável e ordenada, permitindo armazenar coleção de elementos, que podem ser elementos de diferentes tipos de dados e são definidos por estar dentro de colchetes \[]\. separados por virgula.
+
+- Criando e acessando os dados de uma lista.
+
+Para se criar uma lista, ela deve ser definida por uma variável, e seus dados devem estar dentro dos colchetes:
+
+```python
+frutas = ["morango", "uva", "pessego"]
+```
+
+Para acessar os elementos dessa lista, basta invocar a variável definida, e o índice do elemento entre colchetes. Os indicies iniciam a partir do 0.
