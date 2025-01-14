@@ -417,7 +417,230 @@ Lista e uma estrutura de dados mutável e ordenada, permitindo armazenar coleç�
 Para se criar uma lista, ela deve ser definida por uma variável, e seus dados devem estar dentro dos colchetes:
 
 ```python
-frutas = ["morango", "uva", "pessego"]
+frutas = ["Morango", "Uva", "Pêssego"]
 ```
 
 Para acessar os elementos dessa lista, basta invocar a variável definida, e o índice do elemento entre colchetes. Os indicies iniciam a partir do 0.
+
+```python
+print(frutas[0]) # Imprime "Morango"
+print(frutas[1]) # Imprime "Uva"
+print(frutas[2]) # Imprime "Pêssego"
+```
+
+Você também pode acessar os elementos da lista, do inicio para o final, usando seu índice negativo. -1 representa o ultimo item, -2 o penúltimo, e assim por diante.
+```python
+print(frutas[-1])  # Imprime "Pêssego"  
+print(frutas[-2])  # Imprime "Uva"  
+print(frutas[-3])  # Imprime "Morango"
+```
+
+> Método de listas
+
+Em python existe vários métodos que pode ser utilizado para manipular e modificar elementos em uma lista. Os métodos comuns são:
+
+- append(elemento): Adiciona um elemento ao final da lista.
+- insert(índice, elemento): Insere um elemento em uma posição específica da lista.
+- remove(elemento): Remove a primeira ocorrência de um elemento na lista.
+- pop(índice): remove e retorna o elemento em uma posição especifica da lista.
+- sort(): ordena os elementos da lista em ordem ascendente.
+- reverse(): inverte a ordem dos elementos da lista.
+
+Exemplo:
+
+```python
+lista_compras = ["Arroz", "Feijão", "Oleo"]
+
+lista_compras.append("Sal")  
+print(lista_compras)  # Imprime ["Arroz", "Feijão", "Oleo", "Sal"]
+
+lista_compras.insert(1, "Fermento")  
+print(lista_compras)  # Imprime ["Arroz", "Fermento", "Feijão", "Oleo", "Sal"]
+
+lista_compras.remove("Sal")  
+print(lista_compras)  # Imprime ["Arroz", "Fermento", "Feijão", "Oleo"]
+
+item_removido = lista_compras.pop(2)  
+print(lista_compras)  # Imprime ["Arroz", "Fermento", "Oleo"]  
+print(item_removido)  # Imprime "Feijão"
+
+lista_compras.sort()  
+print(lista_compras)  # Imprime ["Arroz", "Fermento", "Oleo"]
+
+lista_compras.reverse()  
+print(lista_compras)  # Imprime ["Oleo", "Fermento", "Arroz"]
+```
+
+
+- Lista de compreensão
+
+As listas de compreensão são uma forma concisa de criar novas listas baseadas em uma sequência existente. Permite filtrar e transformar os elementos de uma lista em uma única linha de código.
+
+```
+nova_lista = [expressão for elemento in sequência if condição]
+```
+
+Exemplo:
+
+```python
+números = [1, 2, 3, 4, 5]  
+quadrados = [x ** 2 for x in números if x % 2 == 0]  
+print(quadrados)  # Imprime [4, 16]
+```
+
+Neste exemplo, é criada uma nova lista chamada quadrados, que contém os quadrados dos números pares da lista números. A expressão x ** 2 eleva cada elemento ao quadrado, e a condição if x % 2 == 0 filtra apenas os números pares.
+
+4.1. Tuplas
+
+Tuplas são estruturas de dados imutável e ordenada que permite armazenar uma coleção de elementos, para definir uma tupla deve ser envolvido os dados entre parênteses e separado por vírgulas.
+
+- Criação e acesso
+
+A criação de uma tupla deve ser feita colocando os elementos entre parênteses:
+
+```python
+ponto = (3, 4)
+```
+
+Para acessar os elementos de uma tupla, utilize o índice do elemento entre colchetes, similar às listas:
+
+```python
+print(ponto[0])  # Imprime 3  
+  
+print(ponto[1])  # Imprime 4
+```
+
+Ao contrário das listas, as tuplas são imutáveis, elas não podem ser modificadas após criadas, Não pode se adicionar, alterar ou eliminar um elemento de um uma tupla existente.
+
+As tuplas são muito uteis quando você vai armazenar informações que não serão modificadas, como coordenadas ou dados de configuração.
+
+>Métodos de tuplas.
+
+Embora as tuplas sejam imutáveis, Python fornece vários métodos úteis para trabalhar com elas:
+
+- **count(elemento):** devolve o número de vezes que um elemento aparece na tupla. 
+- **index(elemento):** devolve o índice da primeira aparição de um elemento na tupla. Opcionalmente, pode-se especificar o início e fim da busca. 
+- **len(tupla):** embora não seja um método de tupla propriamente dito, esta função incorporada devolve o comprimento da tupla.
+
+```python
+minha_tupla = (1, 2, 3, 2, 4, 2)  
+  
+  
+print (minha_tupla.index(2))   # Saída: 1  
+  
+print (minha_tupla.index(2, 2))   #Saída: 3  
+  
+print (minha_tupla.index(2, 2, 4))   #Saída: 3
+```
+
+4.2. Dicionários
+
+Dicionários são estruturas de dados mutável e não ordenada que permite armazenar pares de chave-valor. Cada elemento de um dicionário esta ligado por uma chave única e seu valor correspondente. Os dicionários são delimitados por chaves {}, e os pares chave-valor são separados por vírgula.
+
+> Criação e acesso
+
+Para criar um dicionário, utilize chaves e separe as chaves e valores com dois pontos.
+
+```python
+pessoa = {"nome": "Ayra", "idade": 4, "cidade": "Goiânia"}
+```
+
+Para acessar os valores de um dicionário, utilize a chave correspondente entre colchetes:
+
+```python
+print(pessoa["nome"])  # Imprime "Ayra"  
+print(pessoa["idade"])    # Imprime 4  
+print(pessoa["cidade"])  # Imprime "Goiânia"
+```
+
+> Método de dicionários
+
+Dicionários também possuem métodos incorporados para manipular e acessar os elementos.
+
+- **keys():** retorna uma visualização de todas as chaves do dicionário.
+- **values():** retorna uma visualização de todos os valores do dicionário.
+- **items():** retorna uma visualização de todos os pares chave-valor do dicionário.
+- **update(outro_dicionario):** atualiza o dicionário com os pares chave-valor de outro dicionário.
+
+```python
+pessoa = {"nome": "Thiago", "idade": 38, "cidade": "Goiânia"}  
+  
+  
+print(pessoa.keys())    # Imprime dict_keys(["nome", "idade", "cidade"])  
+print(pessoa.values())  # Imprime dict_values(["Thiago", 38, "Goiânia"])  
+print(pessoa.items())   # Imprime dict_items([("nome", "Goiânia"), ("idade", 38), ("cidade", "Goiânia")])  
+  
+  
+pessoa.update({"profissao": "Técnico de informatica"})  
+print(pessoa)  # Imprime {"nome": "Thiago", "idade": 38, "cidade": "Goiânia", "profissao": "Técnico de informatica"}
+```
+
+
+4.3. Conjuntos (set)
+
+Conjuntos são uma estrutura de dados mutável e não ordenada que permite armazenar uma coleção de elementos únicos. Os conjuntos são delimitados por chaves {} ou são criados pela função set().
+
+- Criando e realizando operações básicas
+
+Pra criar um conjunto, utilize chaves ou a função set():
+
+```python
+materiais_escolares = {"Lápis", "Caderno", "Borracha"}
+numeros = set([1, 2, 3, 4, 5])
+```
+
+Conjuntos suportam operações matemáticas de conjuntos, como a união (|), a interseção (&), a diferença (-) e a diferença simétrica (^).
+
+- União (|): Une os os elementos presentes nos 2 conjuntos.
+- Interseção (&): Mostra o ponto de interseção dos conjuntos.
+- Diferença (-): Mostra o que tem de diferente entre o 1° e os demais conjuntos.
+- Diferença simétrica (^): Mostra a o que os conjuntos tem diferente 1 do outro.
+
+```
+conjunto1 = {1, 2, 3}  
+conjunto2 = {3, 4, 5}  
+  
+  
+uniao = conjunto1 | conjunto2  
+print(uniao)  # Imprime {1, 2, 3, 4, 5}  
+  
+  
+intersecao = conjunto1 & conjunto2  
+print(intersecao)  # Imprime {3}  
+  
+  
+diferenca = conjunto1 - conjunto2  
+print(diferenca)  # Imprime {1, 2}  
+  
+  
+diferenca_simetrica = conjunto1 ^ conjunto2  
+print(diferenca_simetrica)  # Imprime {1, 2, 4, 5}
+```
+
+- Método de conjuntos
+
+Conjuntos também tem seus métodos para manipular e acessar seus elementos.
+
+- add(elemento): adiciona um elemento ao conjunto.
+- remove(elemento): remove um elemento do conjunto. Se o elemento não existir, gera um erro.
+- discard(elemento): remove um elemento do conjunto se estiver presente. Se o elemento não existir, não faz nada.
+- clear(): remove todos os elementos do conjunto.
+```python
+materiais_escolares = {"Lápis", "Caderno", "Borracha"} 
+  
+  
+materiais_escolares.add("Apontador")  
+print(materiais_escolares)  # Imprime {"Lápis", "Caderno", "Borracha", "Apontador"} 
+  
+  
+materiais_escolares.remove("Borracha")  
+print(materiais_escolares)  # Imprime {"Lápis", "Caderno", "Apontador"}  
+  
+  
+materiais_escolares.discard("Agenda")  
+print(materiais_escolares)  # Imprime {"Lápis", "Caderno", "Apontador"} 
+  
+  
+materiais_escolares.clear()  
+print(materiais_escolares)  # Imprime set()
+```
