@@ -644,3 +644,37 @@ print(materiais_escolares)  # Imprime {"Lápis", "Caderno", "Apontador"}
 materiais_escolares.clear()  
 print(materiais_escolares)  # Imprime set()
 ```
+
+## 5. Funções
+
+Funções são blocos de código reutilizáveis, onde podemos encapsular tarefas especificas e executá-las quando necessários.
+
+> Definição e chamadas de funções
+
+Para criar uma função, usamos a palavra reservada do Python "def" e em seguida, damos um nome a função e um parênteses no final, lembre-se sempre de finalizar com ":".
+Podemos ou não especificar os parâmetros dentro dos parênteses.
+
+```
+def saudacao():  
+    print("Olá, mundo!")  
+  
+  
+saudacao()  # Imprime "Olá, mundo!"
+```
+
+> Parâmetros e argumentos
+
+Funções podem aceitar parâmetros, que são valores que são passados para a função quando ela é chamada. Os parâmetros devem ser inseridos dentro dos parênteses ao definir a função.
+
+```python
+def saudacao(nome):  
+    print(f"Olá, {nome}!")
+```
+
+Para chamar essa função, usamos o nome dela, e fornecemos os argumentos entre parênteses:
+
+```python
+saudacao("Aquilles")  # Imprime "Olá, Aquilles!"  
+saudacao("Pietra")  # Imprime "Olá, Pietra!"
+```
+
