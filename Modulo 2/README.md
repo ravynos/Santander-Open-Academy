@@ -254,3 +254,26 @@ Além disso, o bloco finally permite executar código de limpeza ou liberação 
 >Considere os possíveis erros que podem ocorrer no seu código e utilize o tratamento de exceções adequado para lidar com eles de maneira apropriada. Isso tornará seus programas mais robustos e confiáveis.
 
 
+## 7.1. Leitura e escrita de arquivos
+
+Python nos permite ler e escrever dados em arquivos externos. Podemos abrir arquivos em diferentes modos, como leitura("r"), escrita ("w") ou anexar ("a"), e realizar operações de leitura e escrita.
+
+> Leitura de arquivos
+
+Para ler o conteúdo de um arquivo, primeiro devemos abri-lo utilizando a função open() em modo de leitura("r"). Depois, podemos ler o conteúdo do arquivo utilizando método como read() ou readlines().
+
+```python
+arquivo = open("dados.txt", "r")  
+conteudo = arquivo.read()  
+print(conteudo)  
+arquivo.close()
+```
+
+> Escrita de arquivos
+
+Para escrever dados em um arquivo, abrimos em modo escrita("w") utilizando a função open(). Se o arquivo não existir, será criado automaticamente.
+Se o arquivo já existir, seu conteúdo será sobrescrito.
+
+```python
+
+```
