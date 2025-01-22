@@ -254,6 +254,7 @@ Além disso, o bloco finally permite executar código de limpeza ou liberação 
 >Considere os possíveis erros que podem ocorrer no seu código e utilize o tratamento de exceções adequado para lidar com eles de maneira apropriada. Isso tornará seus programas mais robustos e confiáveis.
 
 
+<<<<<<< HEAD
 ## 7.1. Leitura e escrita de arquivos
 
 Python nos permite ler e escrever dados em arquivos externos. Podemos abrir arquivos em diferentes modos, como leitura("r"), escrita ("w") ou anexar ("a"), e realizar operações de leitura e escrita.
@@ -277,3 +278,54 @@ Se o arquivo já existir, seu conteúdo será sobrescrito.
 ```python
 
 ```
+=======
+## 7. Entradas e Saídas
+
+A entrada e saída de dados permite interagir com o usuário e manipular arquivos. Podendo solicitar informações ao usuário ou escrever algo na tela para que ele possa ler.
+
+> Entrada de dados do usuário
+
+A função input() e usada para obter informações do usuário, essa função mostra uma mensagem na tela e abre um campo aguardando o usuário inserir um valor.
+
+```python
+nome = input("Insira seu nome: ")  
+idade = input("Insira sua idade: ")  
+  
+  
+print("Olá, " + nome + "!")  
+print("Você tem " + idade + " anos.")
+```
+
+No exemplo acima, definimos a variável nome, e a frente usando a função input() solicitamos através da mensagem que ele digite seu nome, logo abaixo fazemos a mesma coisa com a variável idade, abaixo, usamos a função print, com os dados digitados para enviar uma saudação personalizada.
+
+>[!important]
+>
+A função input() sempre retorna uma cadeia de texto. Se você deseja trabalhar com outros tipos de dados, como números inteiros ou flutuantes, deve realizar uma conversão explícita utilizando funções como int() ou float().
+
+```python
+n1 = int(input("Digite o 1° numero: ))
+n2 = int(input("Digite o 2° numero: ))			   
+soma = n1 + n2  
+  
+  
+print(f'A soma de {n1} é {n2} e: {soma}')
+```
+
+No exemplo acima, para somar 2 números e necessário que de fato eles sejam um numero, não um texto, usamos a função int() antes do input() para que seja feita a conversão para números inteiros e assim eles possam fazer parte de uma operação matemática.
+
+> Saída de dados
+
+Para realizar a saída de dados, utilizamos a função print(), com ela podemos informar 1 ou mais argumentos e mostrar esses dados no console.
+
+Para facilitar na programação, e na leitura do código e de boa pratica utilizar as f-strings (formatação de cadeia) para que possamos convocar as variáveis diretamente na cadeia de texto.
+
+```python
+nome = "Tammy"  
+idade = 16  
+  
+  
+print(f"Olá, meu nome é {nome} e tenho {idade} anos.")
+```
+
+Neste caso, as variáveis são inseridas dentro da cadeia utilizando chaves {} e a cadeia é precedida pela letra f para indicar que é uma f-string.
+>>>>>>> 4c3400205c965425ef03397e44d82e5d52610ba9
