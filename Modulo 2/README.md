@@ -254,31 +254,6 @@ Além disso, o bloco finally permite executar código de limpeza ou liberação 
 >Considere os possíveis erros que podem ocorrer no seu código e utilize o tratamento de exceções adequado para lidar com eles de maneira apropriada. Isso tornará seus programas mais robustos e confiáveis.
 
 
-<<<<<<< HEAD
-## 7.1. Leitura e escrita de arquivos
-
-Python nos permite ler e escrever dados em arquivos externos. Podemos abrir arquivos em diferentes modos, como leitura("r"), escrita ("w") ou anexar ("a"), e realizar operações de leitura e escrita.
-
-> Leitura de arquivos
-
-Para ler o conteúdo de um arquivo, primeiro devemos abri-lo utilizando a função open() em modo de leitura("r"). Depois, podemos ler o conteúdo do arquivo utilizando método como read() ou readlines().
-
-```python
-arquivo = open("dados.txt", "r")  
-conteudo = arquivo.read()  
-print(conteudo)  
-arquivo.close()
-```
-
-> Escrita de arquivos
-
-Para escrever dados em um arquivo, abrimos em modo escrita("w") utilizando a função open(). Se o arquivo não existir, será criado automaticamente.
-Se o arquivo já existir, seu conteúdo será sobrescrito.
-
-```python
-
-```
-=======
 ## 7. Entradas e Saídas
 
 A entrada e saída de dados permite interagir com o usuário e manipular arquivos. Podendo solicitar informações ao usuário ou escrever algo na tela para que ele possa ler.
@@ -328,4 +303,60 @@ print(f"Olá, meu nome é {nome} e tenho {idade} anos.")
 ```
 
 Neste caso, as variáveis são inseridas dentro da cadeia utilizando chaves {} e a cadeia é precedida pela letra f para indicar que é uma f-string.
->>>>>>> 4c3400205c965425ef03397e44d82e5d52610ba9
+
+## 7.1. Leitura e escrita de arquivos
+
+Python nos permite ler e escrever dados em arquivos externos. Podemos abrir arquivos em diferentes modos, como leitura("r"), escrita ("w") ou anexar ("a"), e realizar operações de leitura e escrita.
+
+> Leitura de arquivos
+
+Para ler o conteúdo de um arquivo, primeiro devemos abri-lo utilizando a função open() em modo de leitura("r"). Depois, podemos ler o conteúdo do arquivo utilizando método como read() ou readlines().
+
+```python
+arquivo = open("dados.txt", "r")  
+conteudo = arquivo.read()  
+print(conteudo)  
+arquivo.close()
+```
+
+> Escrita de arquivos
+
+Para escrever dados em um arquivo, abrimos em modo escrita("w") utilizando a função open(). Se o arquivo não existir, será criado automaticamente.
+Se o arquivo já existir, seu conteúdo será sobrescrito.
+
+```python
+arquivo = open("dados.txt", "w")  
+arquivo.write("Olá, mundo!")  
+arquivo.close()
+```
+
+Neste exemplo, o arquivo "dados.txt" é aberto em modo de escrita utilizando open(). Depois, a string "Olá, mundo!" é escrita no arquivo utilizando o método write(). Finalmente, o arquivo é fechado utilizando o método close().
+
+>[!important]
+>
+>É importante fechar sempre os arquivos depois de utilizá-los para liberar os recursos do sistema.
+
+Você também pode utilizar a declaração with para manejar a abertura e fechamento de arquivos automaticamente.
+
+```python
+with open("dados.txt", "r") as arquivo:  
+    conteudo = arquivo.read()  
+    print(conteudo)
+```
+
+Neste caso, o arquivo é aberto utilizando a declaração with e é fechado automaticamente uma vez que se sai do bloco with, mesmo se ocorrer uma exceção.
+
+>[!note] 
+>
+>A entrada e saída de dados em Python nos oferece uma grande flexibilidade para interagir com o usuário e manipular arquivos externos. Podemos solicitar informações ao usuário, mostrar resultados na tela e ler ou escrever dados em arquivos de texto. Lembre-se sempre de manejar adequadamente a abertura e fechamento de arquivos, e considerar as possíveis exceções que podem ocorrer durante as operações de entrada/saída.
+
+## Importação e criação de módulos
+
+Em Python, um módulo é um arquivo que contém definições, classes e variáveis que podem ser utilizadas em outros programas. A importação de módulos nos permite acessar a funcionalidade definida em outros arquivos e reutilizar código de maneira eficiente. Além disso, podemos criar nossos próprios módulos para organizar e modularizar nosso código.
+
+>[!note]
+>
+>Python vem com uma ampla biblioteca padrão de módulos que fornecem funcionalidades adicionais. Esses módulos estão disponíveis sem a necessidade de instalá-los separadamente.
+
+> Importar módulos
+
