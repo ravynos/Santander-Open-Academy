@@ -400,3 +400,33 @@ print(data_atual)  # Imprime a data e hora atual
 ```
 
 Esses são apernas alguns exemplos dos muitos módulos disponíveis na biblioteca padrão de Python. Você pode consultar a documentação oficial de Python para obter mais informações sobre os módulos e suas funcionalidades.
+
+### 8.1. Criação de módulos próprios
+
+Além de utilizar os módulos padrões do Python, também podemos criar nossos próprios módulos para organizar e reutilizar nosso código.
+
+> Criar e utilizar módulos personalizados
+
+Para criar um módulo personalizado, simplesmente criamos um novo arquivo Python com o nome desejado e definimos as funções, classes e variáveis que queremos incluir no módulo. Por exemplo, criamos um arquivo (no mesmo diretório onde estamos executando Python) chamado meu_modulo.py com o seguinte conteúdo:
+
+```python
+_#meu_modulo.py_  
+def saudar(nome):  
+    print(f"Olá, {nome}!")  
+  
+  
+def calcular_soma(a, b):  
+    return a + b
+```
+
+Depois, podemos importar e utilizar as funções definidas em meu_modulo.py em outro arquivo Python.
+
+```python
+import meu_modulo  
+  
+  
+meu_modulo.saudar("João")  # Imprime "Olá, João!"  
+resultado = meu_modulo.calcular_soma(5, 3)  
+print(resultado)  # Imprime 8
+```
+
