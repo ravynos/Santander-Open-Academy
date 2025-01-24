@@ -253,7 +253,6 @@ Além disso, o bloco finally permite executar código de limpeza ou liberação 
 >[!important]
 >Considere os possíveis erros que podem ocorrer no seu código e utilize o tratamento de exceções adequado para lidar com eles de maneira apropriada. Isso tornará seus programas mais robustos e confiáveis.
 
-
 ## 7. Entradas e Saídas
 
 A entrada e saída de dados permite interagir com o usuário e manipular arquivos. Podendo solicitar informações ao usuário ou escrever algo na tela para que ele possa ler.
@@ -303,7 +302,6 @@ print(f"Olá, meu nome é {nome} e tenho {idade} anos.")
 ```
 
 Neste caso, as variáveis são inseridas dentro da cadeia utilizando chaves {} e a cadeia é precedida pela letra f para indicar que é uma f-string.
-
 ## 7.1. Leitura e escrita de arquivos
 
 Python nos permite ler e escrever dados em arquivos externos. Podemos abrir arquivos em diferentes modos, como leitura("r"), escrita ("w") ou anexar ("a"), e realizar operações de leitura e escrita.
@@ -330,13 +328,14 @@ arquivo.write("Olá, mundo!")
 arquivo.close()
 ```
 
+
 Neste exemplo, o arquivo "dados.txt" é aberto em modo de escrita utilizando open(). Depois, a string "Olá, mundo!" é escrita no arquivo utilizando o método write(). Finalmente, o arquivo é fechado utilizando o método close().
 
 >[!important]
 >
 >É importante fechar sempre os arquivos depois de utilizá-los para liberar os recursos do sistema.
 
-Você também pode utilizar a declaração with para manejar a abertura e fechamento de arquivos automaticamente.
+Você também pode utilizar a declaração with para manejar a abertura e fechamento de arquivos de maneira automática.
 
 ```python
 with open("dados.txt", "r") as arquivo:  
@@ -346,17 +345,58 @@ with open("dados.txt", "r") as arquivo:
 
 Neste caso, o arquivo é aberto utilizando a declaração with e é fechado automaticamente uma vez que se sai do bloco with, mesmo se ocorrer uma exceção.
 
->[!note] 
->
->A entrada e saída de dados em Python nos oferece uma grande flexibilidade para interagir com o usuário e manipular arquivos externos. Podemos solicitar informações ao usuário, mostrar resultados na tela e ler ou escrever dados em arquivos de texto. Lembre-se sempre de manejar adequadamente a abertura e fechamento de arquivos, e considerar as possíveis exceções que podem ocorrer durante as operações de entrada/saída.
+## 8. Importação e criação de módulos
 
-## Importação e criação de módulos
+Em Python, um módulo é um arquivo que contém definições de funções, classes e variáveis que podem ser utilizadas em outros programas. A importação de módulos nos permite acessar a funcionalidade definida em outros arquivos e reutilizar código de maneira eficiente. Além disso, podemos criar nossos próprios módulos para organizar e modularizar nosso código.
 
-Em Python, um módulo é um arquivo que contém definições, classes e variáveis que podem ser utilizadas em outros programas. A importação de módulos nos permite acessar a funcionalidade definida em outros arquivos e reutilizar código de maneira eficiente. Além disso, podemos criar nossos próprios módulos para organizar e modularizar nosso código.
-
->[!note]
->
+>[!Note]
 >Python vem com uma ampla biblioteca padrão de módulos que fornecem funcionalidades adicionais. Esses módulos estão disponíveis sem a necessidade de instalá-los separadamente.
 
 > Importar módulos
 
+Para utilizar um módulo em nosso programa, devemos importá-lo utilizando a declaração import. Podemos importar um módulo completo ou funções específicas de um módulos.
+
+```python
+import math  
+  
+  
+resultado = math.sqrt(25)  
+print(resultado)  # Imprime 5.0
+```
+
+Nesse exemplo, importa-se o módulo "math" utilizando a declaração import. Em seguida, utiliza-se a função sqrt() do módulo math para calcular a raiz quadrada de 25.
+
+Também podemos importar funções específicas de um módulo utilizando a sintaxe from import função.
+
+```python
+from math import sqrt  
+  
+  
+resultado = sqrt(25)  
+print(resultado)  # Imprime 5.0
+```
+
+Neste caso, importa importa somente a função sqrt() do módulo math, o que nos permite utilizá-la diretamente sem ter que precedê-la com nome do módulo.
+
+> Funções e classes de módulos padrão
+
+A biblioteca padrão de Python oferece uma ampla gama de módulos com funções e classes úteis. Alguns exemplos comuns incluem:
+
+- Math: Fornece funções matemáticas, como sqrt() (raiz quadrada), sin() (seno), cos() (cosseno), entre outras.
+- Random: Oferece funções para gerar números aleatórios, como random() (número aleatório entre 0 e 1), randint() (número inteiro aleatório em um intervalo), entre outras.
+- Datatime: Permite trabalhar com datas e horas, como datetime.now() (data e hora atual), datetime.date() (data), datetime.time() (hora), entre outras.
+
+```python
+import random  
+import datetime  
+  
+  
+numero_aleatorio = random.randint(1, 10)  
+print(numero_aleatório)  # Imprime um número inteiro aleatório entre 1 e 10  
+  
+  
+data_atual = datetime.datetime.now()  
+print(data_atual)  # Imprime a data e hora atual
+```
+
+Esses são apernas alguns exemplos dos muitos módulos disponíveis na biblioteca padrão de Python. Você pode consultar a documentação oficial de Python para obter mais informações sobre os módulos e suas funcionalidades.
