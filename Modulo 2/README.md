@@ -430,3 +430,80 @@ resultado = meu_modulo.calcular_soma(5, 3)
 print(resultado)  # Imprime 8
 ```
 
+> Organização do código em módulos
+
+À Medica que nossos programas crescem em tamanho e complexidade, é uma boa prática organizar nosso código em módulos separados segundo sua funcionalidade. Isso nos permite manter um código mais legível, agrupado em módulos e fácil de manter.
+
+Por exemplo, podemos ter um módulo operacoes.py que contenha funções relacionadas com operações matemáticas, e outro módulo utilidades.py que contenha funções de uso geral.
+
+```python
+# operacoes.py  
+def somar(a, b):  
+    return a + b  
+  
+  
+def subtrair(a, b):  
+    return a - b  
+  
+  
+# utilidades.py  
+def imprimir_mensagem(mensagem):  
+    print(mensagem)  
+  
+  
+def obter_nome_usuario():  
+    return input("Digite seu nome: ")
+```
+
+Depois, podemos importar e utilizar essas funções em nosso programa principal.
+
+```python
+import operacoes  
+import utilidades  
+  
+  
+resultado = operacoes.somar(5, 3)  
+utilidades.imprimir_mensagem(f"O resultado da soma é: {resultado}")  
+  
+  
+nome = utilidades.obter_nome_usuario()  
+utilidades.imprimir_mensagem(f"Olá, {nome}!")
+```
+
+Ao organizar nosso código em módulos, podemos reutilizar funções e manter um código mais estruturado e agrupado em módulos.
+
+8.2. Pacotes
+
+Um pacote é uma forma de organizar módulos relacionados em uma estrutura hierárquica de diretórios. os pacotes nos permitem agrupar módulos relacionados e evitar conflitos de nome entre módulos.
+
+> Criar e utilizar pacotes
+
+Para criar um pacote, criamos um diretório com o nome desejado e adicionamos um arquivo especial chamado \_\_init\_\_.py dentro do diretório. Este arquivo pode estar vazio ou conter código de inicialização de pacote.
+
+Por exemplo, criamos um diretório chamado meu_pacote com a seguinte estrutura:
+
+```python
+meu_pacote/  
+    __init__.py  
+    modulo1.py  
+    modulo2.py
+```
+
+Depois, podemos importar e utilizar os módulos do pacote em nosso programa.
+
+```python
+from meu_pacote import modulo1, modulo2  
+  
+  
+modulo1.funcao1()  
+modulo2.funcao2()
+```
+
+Nesse exemplo, são importados os módulos modulo1 e modulo2 do pacote meu_pacote e são utilizadas as funções definidas neles.
+
+>[!note]
+>
+>A importação e criação de módulos e pacotes em Python nos permite organizar e reutilizar nosso código de maneira eficiente. Ao modularizar nosso código, podemos manter um código mais legível, estruturado e fácil de manter.
+>
+>Lembre-se de explorar a biblioteca padrão de Python e aproveitar os módulos existente, que podem facilitar muitas tarefas comuns. Além disso, não hesite em criar seus próprios módulos e pacotes para organizar e reutilizar seus códigos de maneira eficaz.
+
